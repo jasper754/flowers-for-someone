@@ -161,15 +161,7 @@ body {
 }
 
 .flower__leafs::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  transform: translate(-50%, -100%);
-  width: 8vmin;
-  height: 8vmin;
-  background-color: #fff;
-  filter: blur(10vmin);
+  display: none;
 }
 
 .flower__leaf {
@@ -179,8 +171,9 @@ body {
   width: 8vmin;
   height: 11vmin;
   border-radius: 51% 49% 47% 53%/44% 45% 55% 69%;
-  background-color: #a7ffee;
-  background-image: linear-gradient(to top, #fff, #fff);
+  /* petals: blue */
+  background-color: #4da6ff;
+  background-image: linear-gradient(to top, #9ed8ff, #4da6ff);
   transform-origin: bottom center;
   opacity: 0.9;
   box-shadow: inset 0 0 2vmin rgba(255, 255, 255, 0.5);
@@ -238,7 +231,8 @@ body {
 .flower__line {
   height: 55vmin;
   width: 1.5vmin;
-  background-image: linear-gradient(to left, rgba(0, 0, 0, 0.2), transparent, rgba(255, 255, 255, 0.2)), linear-gradient(to top, transparent 10%, #fff, #fff);
+  /* stem: green gradient */
+  background-image: linear-gradient(to left, rgba(0, 80, 0, 0.6), transparent, rgba(0, 120, 0, 0.6)), linear-gradient(to top, transparent 10%, #2ecc40, #1aaa15);
   box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.5);
   animation: grow-flower-tree 4s backwards;
 }
@@ -253,7 +247,8 @@ body {
   height: var(--h);
   border-top-right-radius: var(--h);
   border-bottom-left-radius: var(--h);
-  background-image: linear-gradient(to top, rgba(255, 255, 255, 0.4), #fff);
+  /* leaf color: green */
+  background-image: linear-gradient(to top, rgba(160, 255, 180, 0), #1aaa15);
 }
 
 .flower__line__leaf--1 {
@@ -306,7 +301,7 @@ body {
 }
 
 .flower__light:nth-child(odd) {
-  background-color: #fff;
+  display: none;
 }
 
 .flower__light--1 {
@@ -350,7 +345,7 @@ body {
 }
 
 .flower__grass {
-  --c: #fff;
+  --c: #1aaa15;
   --line-w: 1.5vmin;
   position: absolute;
   bottom: 12vmin;
@@ -524,20 +519,14 @@ body {
 }
 
 .flower__grass__overlay {
-  position: absolute;
-  top: -10%;
-  right: 0%;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
-  filter: blur(1.5vmin);
-  z-index: 100;
+  display: none;
 }
 
 .flower__g-long {
   --w: 2vmin;
   --h: 6vmin;
-  --c: #fff;
+  /* stem color */
+  --c: #1aaa15;
   position: absolute;
   bottom: 10vmin;
   left: -3vmin;
@@ -589,12 +578,9 @@ body {
 }
 
 .flower__g-right .leaf {
-  width: 30vmin;
-  height: 50vmin;
-  border-top-left-radius: 100%;
-  border-left: 2vmin solid #fff;
-  background-image: linear-gradient(to bottom, transparent, var(--dark-color) 60%);
-  -webkit-mask-image: linear-gradient(to top, transparent 30%, #fff 60%);
+   background-image: none !important;
+  -webkit-mask-image: none !important;
+  background-color: transparent !important;
 }
 
 .flower__g-right--1 {
@@ -764,7 +750,8 @@ body {
   height: 10vmin;
   border-radius: 100% 0% 0% 100%/100% 100% 0% 0%;
   box-shadow: inset 0 2px 1vmin hsla(0, 0%, 100%, 0.2);
-  background-image: linear-gradient(to bottom left, transparent, var(--dark-color)), linear-gradient(to bottom right, #fff 50%, transparent 50%, transparent);
+  /* small front leaves: green */
+  background-image: linear-gradient(to bottom left, transparent, var(--dark-color)), linear-gradient(to bottom right, #1aaa15 50%, transparent 50%, transparent);
   -webkit-mask-image: linear-gradient(to bottom right, #fff 50%, transparent 50%, transparent);
   mask-image: linear-gradient(to bottom right, #fff 50%, transparent 50%, transparent);
 }
@@ -798,8 +785,8 @@ body {
   width: 30vmin;
   height: 50vmin;
   border-top-left-radius: 100%;
-  border-left: 2vmin solid #fff;
-  -webkit-mask-image: linear-gradient(to top, transparent 25%, #fff 50%);
+  border-left: 2vmin solid #1aaa15;
+  -webkit-mask-image: linear-gradient(to top, transparent 25%, #1aaa15 50%);
   position: relative;
   z-index: 1;
 }
@@ -812,8 +799,8 @@ body {
   height: 10vmin;
   border-radius: 100% 0% 0% 100%/100% 100% 0% 0%;
   box-shadow: inset 0 2px 1vmin hsla(0, 0%, 100%, 0.2);
-  background-image: linear-gradient(to bottom left, transparent, var(--dark-color) 98%), linear-gradient(to bottom right, #fff 45%, transparent 50%, transparent);
-  -webkit-mask-image: linear-gradient(135deg, #fff 40%, transparent 50%, transparent);
+  background-image: linear-gradient(to bottom left, transparent, var(--dark-color) 98%), linear-gradient(to bottom right, #1aaa15 45%, transparent 50%, transparent);
+  -webkit-mask-image: linear-gradient(135deg, #1aaa15 40%, transparent 50%, transparent);
 }
 
 .flower__g-fr__leaf--1 {
@@ -919,7 +906,7 @@ body {
 }
 
 .long-g--1 .leaf {
-  -webkit-mask-image: linear-gradient(to top, transparent 40%, #fff 80%) !important;
+  -webkit-mask-image: linear-gradient(to top, transparent 40%, #1aaa15 80%) !important;
 }
 
 .long-g--1 .leaf--1 {
@@ -939,7 +926,7 @@ body {
 
 .long-g--2 .leaf,
 .long-g--3 .leaf {
-  -webkit-mask-image: linear-gradient(to top, transparent 50%, #fff 80%) !important;
+  -webkit-mask-image: linear-gradient(to top, transparent 50%, #1aaa15 80%) !important;
 }
 
 .long-g--2 .leaf--1,
@@ -954,7 +941,7 @@ body {
 }
 
 .long-g--3 .leaf {
-  -webkit-mask-image: linear-gradient(to top, transparent 40%, #fff 80%) !important;
+  -webkit-mask-image: linear-gradient(to top, transparent 40%, #1aaa15 80%) !important;
 }
 
 .long-g--4 {
@@ -965,7 +952,7 @@ body {
 }
 
 .long-g--4 .leaf {
-  -webkit-mask-image: linear-gradient(to top, transparent 50%, #fff 80%) !important;
+  -webkit-mask-image: linear-gradient(to top, transparent 50%, #1aaa15 80%) !important;
 }
 
 .long-g--5 {
@@ -974,22 +961,11 @@ body {
   transform: scale(0.8) rotate(2deg);
 }
 
-.long-g--6 {
-  left: 0vmin;
-  bottom: -20vmin;
-  z-index: 100;
-  filter: blur(0.3vmin);
-  transform: scale(0.8) rotate(2deg);
+.long-g--6,
+.long-g--7 {
+  filter: none;
 }
 
-.long-g--7 {
-  left: 35vmin;
-  bottom: 20vmin;
-  z-index: -1;
-  filter: blur(0.3vmin);
-  transform: scale(0.6) rotate(2deg);
-  opacity: 0.7;
-}
 
 .long-g .leaf {
   --w: 15vmin;
@@ -1213,4 +1189,23 @@ body {
   animation-play-state: paused !important;
 }
 
-/*# sourceMappingURL=style.css.map */
+/* REMOVE DARK GREEN GRADIENT SHAPES */
+.flower__grass::after,
+.flower__leafs::after {
+  display: none !important;
+}
+
+/* Remove any remaining depth gradients */
+.long-g,
+.long-g::before,
+.long-g::after {
+  background: none !important;
+  filter: none !important;
+}
+
+/* No haze, no glow */
+.flowers,
+.flowers * {
+  box-shadow: none !important;
+}
+
